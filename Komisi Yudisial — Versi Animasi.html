@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Komisi Yudisial RI — Versi Animasi</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Playfair+Display:ital@1&display=swap">
+<style>
+:root{--d:#3E2A1E;--dd:#2A1B12;--m:#5A3D2B;--g:#C8A24A;--gt:#8A6A1E;--bg:#F7F2EC;--br:#E8DFD5;--mu:#6B5A4D;--ink:#2B1D14;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.w{max-width:1200px;margin:0 auto;padding:0 24px}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;background:linear-gradient(90deg,var(--g),#F0D58A);z-index:99}
+.top{background:var(--d);color:#EADFD2;font-size:13px;padding:10px 0}
+.top .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--br);transition:.4s}
+nav.sm{box-shadow:0 8px 30px rgba(42,27,18,.12)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:76px;transition:.4s}
+nav.sm .w{height:62px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:46px;height:46px;border-radius:50%;background:var(--d);border:2px solid var(--g);color:var(--g);display:grid;place-items:center;font-weight:800;font-size:11px}
+.brand b{display:block;font-size:19px;color:var(--d)}.brand small{font-size:10px;letter-spacing:2px;color:var(--mu)}
+.menu{display:flex;gap:28px;font-size:14px;font-weight:600}
+.menu a{position:relative;padding:6px 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--g);transition:.35s}
+.menu a:hover::after{width:100%}
+.btn{display:inline-block;padding:14px 26px;border-radius:10px;font-weight:700;font-size:14px;transition:transform .25s,box-shadow .25s;will-change:transform}
+.b1{background:var(--g);color:var(--d)}.b1:hover{box-shadow:0 10px 30px rgba(200,162,74,.45)}
+.b2{border:1.5px solid #A68266;color:#fff}.b3{background:var(--d);color:#fff}.b4{border:1.5px solid #DDD0C2;color:var(--d);background:#fff}
+.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,var(--dd),var(--m));color:#fff;padding:96px 0 110px;--mx:70%;--my:30%}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(520px circle at var(--mx) var(--my),rgba(200,162,74,.22),transparent 60%);pointer-events:none}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 60% 40%,#000 20%,transparent 75%);animation:pan 14s linear infinite}
+@keyframes pan{to{background-position:56px 56px}}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;animation:fl 12s ease-in-out infinite alternate}
+.o1{width:380px;height:380px;background:#C8A24A;top:-80px;right:8%}.o2{width:320px;height:320px;background:#8A5A3A;bottom:-100px;left:30%;animation-delay:-5s}
+@keyframes fl{to{transform:translate(-40px,40px) scale(1.12)}}
+.hg{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.eb{font-size:12px;letter-spacing:4px;font-weight:700;color:var(--g)}
+h1{font-size:clamp(36px,5.2vw,58px);line-height:1.1;margin:18px 0 22px;font-weight:800}
+h1 .ln{display:block;overflow:hidden}
+h1 .ln span{display:inline-block;transform:translateY(110%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+h1 .ln:nth-child(2) span{animation-delay:.12s}h1 .ln:nth-child(3) span{animation-delay:.24s}
+.gold{background:linear-gradient(90deg,#C8A24A,#F3DC9B,#C8A24A);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:up .9s .12s cubic-bezier(.2,.8,.2,1) forwards,sh 5s linear infinite}
+@keyframes up{to{transform:none}}@keyframes sh{to{background-position:-200% 0}}
+.lead{font-size:17px;line-height:1.7;color:#E0D0BF;max-width:560px;margin:0 0 30px}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.stats{display:flex;gap:40px;margin-top:46px;flex-wrap:wrap}
+.stats b{display:block;font-size:32px;color:var(--g);font-weight:800}.stats span{font-size:13px;color:#E0D0BF}
+.frame{position:relative;border-radius:22px;padding:2px;overflow:hidden}
+.frame::before{content:"";position:absolute;inset:-60%;background:conic-gradient(transparent 70%,var(--g));animation:spin 7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.frame .in{position:relative;height:440px;border-radius:20px;background:linear-gradient(135deg,var(--m),var(--d));display:grid;place-items:center;color:#C9B29A;font-size:13px;letter-spacing:2px;text-align:center;padding:20px}
+.chip{position:absolute;padding:12px 18px;border-radius:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(12px);font-size:13px;font-weight:700;animation:bob 5s ease-in-out infinite alternate}
+.c1{left:-26px;top:60px}.c2{right:-18px;bottom:70px;animation-delay:-2.5s}
+.chip i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--g);margin-right:8px;box-shadow:0 0 0 0 var(--g);animation:pl 2s infinite}
+@keyframes bob{to{transform:translateY(-14px)}}@keyframes pl{70%{box-shadow:0 0 0 10px transparent}}
+.mq{background:var(--g);color:var(--d);overflow:hidden;white-space:nowrap;padding:14px 0;font-weight:800;letter-spacing:3px;font-size:13px}
+.mq div{display:inline-block;animation:mq 28s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:96px 0}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0)*110ms)}
+.rv.in{opacity:1;transform:none}
+.pf{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center}
+.photo{position:relative;height:560px;border-radius:16px;background:linear-gradient(135deg,var(--m),var(--d));display:grid;place-items:center;color:#C9B29A;font-size:13px;letter-spacing:2px;text-align:center}
+.photo::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--g);border-radius:16px;z-index:-1;transition:.8s .3s;transform:translate(-18px,-18px);opacity:0}
+.in .photo::after,.photo.in::after{transform:none;opacity:1}
+.ey{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:4px;font-weight:700;color:var(--gt)}
+.ey::before{content:"";width:32px;height:2px;background:var(--g)}
+h2{font-size:clamp(30px,4.4vw,46px);line-height:1.1;margin:16px 0 22px;font-weight:800;color:var(--d)}
+h2 em{font-style:normal;color:var(--gt)}
+.q{font-family:'Playfair Display',serif;font-style:italic;font-size:22px;line-height:1.6;color:#4A382C;border-top:1px solid #DDD0C2;padding-top:22px;margin:0 0 22px}
+.p{color:var(--mu);line-height:1.7;margin:0 0 28px}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:28px;perspective:900px}
+.card{position:relative;background:#fff;border:1px solid var(--br);border-radius:16px;padding:28px;overflow:hidden;transform-style:preserve-3d;transition:transform .2s ease-out,box-shadow .3s;--mx:50%;--my:50%}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx) var(--my),rgba(200,162,74,.22),transparent 65%);opacity:0;transition:.3s}
+.card:hover::before{opacity:1}.card:hover{box-shadow:0 20px 40px rgba(62,42,30,.14)}
+.card::after{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:var(--g);transform:scaleX(0);transform-origin:left;transition:.5s}
+.card:hover::after{transform:none}
+.ic{position:relative;width:52px;height:52px;border-radius:12px;background:var(--d);display:grid;place-items:center;margin-bottom:20px}
+.ic svg{width:26px;height:26px;fill:none;stroke:var(--g);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.card h3{position:relative;margin:0 0 8px;font-size:17px;color:var(--d)}.card p{position:relative;margin:0 0 16px;font-size:14px;line-height:1.6;color:var(--mu)}
+.card a{position:relative;font-size:13px;font-weight:700;color:var(--gt)}
+.bt{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+.feat{border-radius:16px;min-height:340px;background:linear-gradient(180deg,var(--m),var(--dd));color:#fff;padding:36px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.feat::before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:var(--g);filter:blur(90px);opacity:.25;top:-80px;right:-60px;animation:fl 9s ease-in-out infinite alternate}
+.feat>*{position:relative}
+.tag{align-self:flex-start;background:var(--g);color:var(--d);font-size:12px;font-weight:800;padding:5px 12px;border-radius:20px;margin-bottom:14px}
+.feat h3{margin:0 0 10px;font-size:30px;line-height:1.2}.feat p{margin:0 0 20px;color:#E0D0BF;font-size:14px}
+.vid{border-radius:16px;background:var(--bg);border:1px solid var(--br);padding:28px;text-align:center}
+.vid h3{margin:0 0 6px;font-size:20px;color:var(--gt)}.vid>p{margin:0 0 18px;font-size:13px;color:var(--mu)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.v{background:#fff;border:1px solid var(--br);border-radius:12px;padding:10px;text-align:left;font-size:12px;font-weight:700;color:var(--d)}
+.th{height:120px;border-radius:8px;background:var(--d);display:grid;place-items:center;margin-bottom:8px}
+.pl{position:relative;width:46px;height:46px;border-radius:50%;background:var(--g);display:grid;place-items:center}
+.pl::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--g);animation:rg 2.2s ease-out infinite}
+@keyframes rg{to{transform:scale(1.9);opacity:0}}
+.pl svg{width:16px;fill:var(--d);margin-left:3px}
+footer{background:var(--dd);color:#fff;padding:64px 0 48px;position:relative;overflow:hidden}
+.fh{display:flex;align-items:center;gap:16px;padding-bottom:34px;border-bottom:1px solid #4A3427}
+.fh .logo{width:62px;height:62px;background:var(--dd)}
+.fh b{font-size:22px}.fh small{display:block;font-size:13px;color:#CDB9A4;margin-top:6px}
+.fc{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;padding:34px 0;border-bottom:1px solid #4A3427}
+.fc h4{margin:0 0 16px;font-size:15px;display:inline-block;border-bottom:2px solid var(--g);padding-bottom:6px}
+.fc div div{font-size:13px;color:#CDB9A4;margin-bottom:10px}
+.fb{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding-top:34px}
+.fb h4{margin:0 0 16px;font-size:15px}
+.map{height:210px;border-radius:12px;background:#EFE6DB;color:var(--mu);display:grid;place-items:center;font-size:13px;letter-spacing:2px}
+input,textarea{width:100%;padding:12px 14px;border-radius:8px;border:1px solid #7A5A44;background:#33231A;color:#fff;font:inherit;font-size:13px;margin-bottom:12px;transition:.3s}
+input:focus,textarea:focus{outline:none;border-color:var(--g);box-shadow:0 0 0 3px rgba(200,162,74,.25)}
+.send{display:block;width:100%;border:0;cursor:pointer;font:inherit;padding:13px;border-radius:8px;background:var(--g);color:var(--d);font-weight:800;font-size:14px}
+@media(max-width:900px){.menu{display:none}.hg,.pf,.bt,.fb{grid-template-columns:1fr}.cards,.fc{grid-template-columns:1fr 1fr}.c1{left:8px}.c2{right:8px}.pf{gap:48px}.photo{height:420px}section{padding:64px 0}}
+@media(max-width:560px){.cards,.fc{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}h1 .ln span,.gold{transform:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+<div id="bar"></div>
+<div class="top"><div class="w"><span>Jl. Kramat Raya No. 57, Jakarta Pusat</span><span>[NOMOR TELEPON] &nbsp;|&nbsp; [EMAIL RESMI]</span></div></div>
+<nav id="nav"><div class="w"><div class="brand"><div class="logo">LOGO</div><div><b>Komisi Yudisial</b><small>REPUBLIK INDONESIA</small></div></div>
+<div class="menu"><a href="#top">Beranda</a><a href="#profil">Profil</a><a href="#layanan">Layanan</a><a href="#footer">Informasi</a><a href="#footer">Publikasi</a><a href="#footer">Transparansi</a></div>
+<a href="#footer" class="btn b1 mag">Lapor Sekarang</a></div></nav>
+
+<header class="hero" id="top"><div class="grid"></div><div class="orb o1"></div><div class="orb o2"></div>
+<div class="w hg"><div>
+<div class="eb">MENJAGA KEHORMATAN HAKIM</div>
+<h1><span class="ln"><span>Mewujudkan Peradilan</span></span><span class="ln"><span class="gold">yang Bersih dan</span></span><span class="ln"><span class="gold">Berintegritas.</span></span></h1>
+<p class="lead">[DESKRIPSI SINGKAT TUGAS KOMISI YUDISIAL: seleksi calon hakim agung, penegakan kehormatan hakim, dan layanan laporan masyarakat.]</p>
+<div class="row"><a href="#footer" class="btn b1 mag">Sampaikan Laporan</a><a href="#profil" class="btn b2 mag">Pelajari Profil</a></div>
+<div class="stats"><div><b data-to="1200">0</b><span>Laporan Masyarakat</span></div><div><b data-to="860">0</b><span>Pemantauan Sidang</span></div><div><b data-to="45">0</b><span>Calon Hakim Agung</span></div></div>
+</div>
+<div style="position:relative"><div class="frame"><div class="in">[FOTO KEGIATAN / GEDUNG KY]</div></div>
+<div class="chip c1"><i></i>Transparan</div><div class="chip c2"><i></i>Akuntabel</div></div></div></header>
+
+<div class="mq"><div>INTEGRITAS &nbsp;•&nbsp; TRANSPARANSI &nbsp;•&nbsp; AKUNTABILITAS &nbsp;•&nbsp; KEHORMATAN HAKIM &nbsp;•&nbsp; KEADILAN &nbsp;•&nbsp; INTEGRITAS &nbsp;•&nbsp; TRANSPARANSI &nbsp;•&nbsp; AKUNTABILITAS &nbsp;•&nbsp; KEHORMATAN HAKIM &nbsp;•&nbsp; KEADILAN &nbsp;•&nbsp;</div></div>
+
+<section id="profil"><div class="w pf">
+<div class="photo rv">[FOTO KETUA KY]</div>
+<div><div class="ey rv">SAMBUTAN PIMPINAN</div>
+<h2 class="rv" style="--i:1">Visi Kepemimpinan <em>Menjaga Marwah Peradilan.</em></h2>
+<p class="q rv" style="--i:2">"[KUTIPAN VISI PIMPINAN KOMISI YUDISIAL]"</p>
+<p class="p rv" style="--i:3">[PARAGRAF PENJELASAN KOMITMEN KY terhadap integritas, transparansi, dan akuntabilitas.]</p>
+<div class="row rv" style="--i:4;align-items:center;gap:24px"><a href="#" class="btn b3 mag">Baca Selengkapnya</a><div><b style="color:var(--d)">[NAMA KETUA]</b><div style="font-size:13px;color:var(--mu)">Ketua Komisi Yudisial RI</div></div></div></div></div></section>
+
+<section id="layanan" style="background:#fff"><div class="w">
+<div class="sh rv"><div><h2 style="margin:0 0 10px">Layanan <em>Utama</em></h2><p class="p" style="margin:0;max-width:520px">Empat layanan utama Komisi Yudisial untuk masyarakat dan insan peradilan.</p></div><div class="row"><a href="#" class="btn b4 mag">Semua Layanan</a><a href="#footer" class="btn b1 mag">Lapor Sekarang</a></div></div>
+<div class="cards">
+<div class="card rv tilt" style="--i:0"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z M14 3v5h5 M9 13h7 M9 17h7"/></svg></div><h3>Laporan Masyarakat</h3><p>Sampaikan dugaan pelanggaran kode etik hakim.</p><a href="#">Lihat Selengkapnya →</a></div>
+<div class="card rv tilt" style="--i:1"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 21c0-4 3-6 7-6s7 2 7 6 M16 11l2 2 4-4"/></svg></div><h3>Seleksi Hakim Agung</h3><p>Informasi tahapan seleksi calon hakim agung.</p><a href="#">Lihat Selengkapnya →</a></div>
+<div class="card rv tilt" style="--i:2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Pemantauan Persidangan</h3><p>Pengawasan jalannya sidang secara terbuka.</p><a href="#">Lihat Selengkapnya →</a></div>
+<div class="card rv tilt" style="--i:3"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18 M5 7h14 M5 7l-3 7a3.5 3.5 0 0 0 6 0z M19 7l-3 7a3.5 3.5 0 0 0 6 0z M8 21h8"/></svg></div><h3>Kode Etik Hakim</h3><p>Pedoman perilaku dan kehormatan hakim.</p><a href="#">Lihat Selengkapnya →</a></div></div>
+<div class="bt"><div class="feat rv"><span class="tag">Unggulan</span><h3>[JUDUL PROGRAM / BERITA UTAMA]</h3><p>[Ringkasan satu kalimat.]</p><div class="row"><a href="#" class="btn b2 mag">Pelajari Lebih Lanjut</a></div></div>
+<div class="vid rv" style="--i:1"><h3>Video Kegiatan</h3><p>[Keterangan singkat video.]</p><div class="vs">
+<div class="v"><div class="th"><div class="pl"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></div></div>[Judul Video 1]</div>
+<div class="v"><div class="th"><div class="pl"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></div></div>[Judul Video 2]</div></div>
+<a href="#" style="display:block;margin-top:20px;font-size:13px;font-weight:700;color:var(--gt)">Lihat semua video →</a></div></div></div></section>
+
+<footer id="footer"><div class="w">
+<div class="fh rv"><div class="logo">LOGO</div><div><b>Komisi Yudisial Republik Indonesia</b><small>[TAGLINE / DESKRIPSI SINGKAT LEMBAGA]</small></div></div>
+<div class="fc rv"><div><h4>Informasi Kantor</h4><div>Jl. Kramat Raya No. 57, Jakarta Pusat</div><div>[NOMOR TELEPON]</div><div>[EMAIL RESMI]</div><div>[JAM LAYANAN]</div></div>
+<div><h4>Menu</h4><div>Beranda</div><div>Profil</div><div>Layanan</div><div>Berita</div><div>Publikasi</div></div>
+<div><h4>Informasi Tambahan</h4><div>Seleksi Hakim Agung</div><div>Kode Etik Hakim</div><div>Transparansi Informasi</div><div>PPID</div><div>Unduh Brosur</div></div>
+<div><h4>FAQ</h4><div>Bagaimana cara melapor?</div><div>Apa syarat laporan?</div><div>Berapa lama proses?</div></div></div>
+<div class="fb rv"><div><h4>Lokasi Kami</h4><div class="map">[PETA GOOGLE MAPS]</div></div>
+<div><h4>Hubungi Kami</h4><input aria-label="Nama" placeholder="Nama Anda"><input aria-label="Email" placeholder="Email"><textarea aria-label="Pesan" placeholder="Pesan Anda" rows="3"></textarea><button class="send mag" type="button">Kirim Pesan</button></div></div></div></footer>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var nav=document.getElementById('nav'),bar=document.getElementById('bar');
+addEventListener('scroll',function(){
+nav.classList.toggle('sm',scrollY>20);
+var h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%';
+},{passive:true});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+function count(el){var to=+el.dataset.to,t0=performance.now(),d=1600;
+if(rm){el.textContent=to.toLocaleString('id-ID')+'+';return}
+(function f(t){var p=Math.min((t-t0)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(to*e).toLocaleString('id-ID')+(p===1?'+':'');if(p<1)requestAnimationFrame(f)})(t0)}
+var co=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){count(e.target);co.unobserve(e.target)}})});
+document.querySelectorAll('[data-to]').forEach(function(el){co.observe(el)});
+if(rm)return;
+var hero=document.querySelector('.hero');
+hero.addEventListener('mousemove',function(e){var r=hero.getBoundingClientRect();hero.style.setProperty('--mx',(e.clientX-r.left)+'px');hero.style.setProperty('--my',(e.clientY-r.top)+'px')});
+document.querySelectorAll('.tilt').forEach(function(c){
+c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');
+c.style.transform='rotateX('+((.5-y)*6)+'deg) rotateY('+((x-.5)*8)+'deg) translateY(-4px)';c.style.transitionDelay='0s'});
+c.addEventListener('mouseleave',function(){c.style.transform=''})});
+document.querySelectorAll('.mag').forEach(function(b){
+b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.28)+'px)'});
+b.addEventListener('mouseleave',function(){b.style.transform=''})});
+})();
+</script></body></html>
